@@ -16,7 +16,7 @@ def generate_tests(swagger_url, base_url, output_file):
             test_name = "test_get_" + path.strip("/").replace("/", "_").replace("{", "").replace("}", "")
             full_url = base_url + path
 
-            # write the tests, yo
+            # write the tests
             function_body = f"""
 def {test_name}():
     response = requests.get(f"{full_url}")
